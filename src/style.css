@@ -1,0 +1,257 @@
+/* -------------------- */
+/* Table of contents    */
+/* -------------------- */
+/* 1. Properties        */
+/* 2. Layout            */
+/* 3. Components        */
+/* 3.1 Header & Footer  */
+/* 3.2 Form             */
+/* 4. Typography        */
+/* 5. Utility           */
+/* 6. Media queries     */
+/* -------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Crimson+Text:wght@700display=swap');
+
+/* ---------------- */
+/*  1.PROPERTIES    */
+/* ---------------- */
+
+:root {
+    --col-light-red: rgb(255, 245, 245);
+    --col-medium-red: rgb(245, 201, 201);
+    --col-md-bright-red: rgb(214, 86, 86);
+    --col-bright-red: rgb(204, 70, 70);
+
+    --font-header: 'Crimson Text', serif;
+    --font-regular: 'Poppins', sans-serif;
+}
+
+
+/* ------------ */
+/*  2.LAYOUT    */
+/* ------------ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to top, #30a9c7, #81dbf0);
+}
+
+.wrapper {
+    min-width: 375px;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+/* -------------------- */
+/*  3.COMPONENTS        */
+/*  3.1.HEADER & FOOTER */
+/* -------------------- */
+
+header,
+footer {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: grid;
+    place-items: center;
+}
+
+header {    
+    row-gap: .5rem;
+}
+
+
+/* ------------ */
+/*  3.2.FORM    */
+/* ------------ */
+
+form {
+    background-color: white;
+    outline: 2px solid var(--col-medium-red);
+    display: flex;
+    flex-direction: column;
+}
+
+form > .container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/*  Background horizontal stripes:
+    1st, 3rd, 5th... rows in form become of color */
+form > *:nth-child(2n+1) {
+    background-color: var(--col-light-red);
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hide marks because labels are used in their place */
+input[type="radio"],
+input[type="checkbox"] {
+    display: none;
+}
+
+.switch {
+    display: block;
+}
+
+.field,
+.switch,
+#submit {
+    padding: .5rem;
+    background-color: inherit;
+    border-radius: .25rem;
+    border: none;
+}
+
+.field,
+.switch {
+    outline: 2px dotted var(--col-medium-red);
+}
+
+.field:focus{
+    outline: 2px dotted var(--col-bright-red);
+}
+
+input:not(:checked) + .switch {
+    outline: 2px dotted var(--col-medium-red);
+}
+
+input:checked + .switch {
+    background-color: var(--col-medium-red);
+    outline: 2px solid var(--col-medium-red);
+}
+
+textarea {
+    height: 10rem;
+    min-height: 10rem;
+    resize: vertical;
+}
+
+#submit {
+    width: 100%;
+    background-color: var(--col-bright-red);
+    cursor: pointer;    
+}
+
+#submit:hover {
+    background-color: var(--col-md-bright-red);
+}
+
+#submit:focus {
+    background-color: var(--col-medium-red);
+}
+
+
+/* ---------------- */
+/*  4.TYPOGRAPHY    */
+/* ---------------- */
+
+html {
+    font-family: var(--font-regular);
+    font-size: 20px;
+}
+
+#title {
+    font-family: var(--font-header);
+    line-height: 80%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#description,
+label {
+    text-align: justify;
+}
+
+footer,
+#component1,
+#component2,
+select,
+.switch,
+#title {
+    text-align: center;
+}
+
+.fieldName {
+    text-indent: .5rem;
+}
+
+select,
+textarea,
+input {
+    font-size: 1rem;
+}
+
+#submit {
+    color: white;
+    font-weight: 700;
+}
+
+
+/* ------------ */
+/*  5.UTILITY   */
+/* ------------ */
+
+.separateFieldname {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+.field,
+.switch {
+    width: 100%;
+}
+
+.formColsThenRows,
+.formOptionsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: .5rem;
+    align-items: baseline;
+}
+
+
+/* ---------------- */
+/*  6.MEDIA QUERIES */
+/* ---------------- */
+
+@media (min-width: 550px) {
+    .formColsThenRows {
+        grid-template-columns: 30% 1fr;
+    }
+
+    .formOptionsGrid {
+        grid-template-columns: 1fr 1fr;
+        column-gap: .5rem;
+    }
+}
+
+@media (min-width: 551px) {
+    form {        
+        border-radius: .5rem;
+        overflow: hidden; 
+        box-shadow: 0 0 2rem hsla(0, 0%, 0%, 0.253);
+    }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <title>Vaccination Survey</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        <main id="main" class="wrapper">
+            <div id="crossOne" class="cross"></div>
+            <div id="crossTwo" class="cross"></div>
+            <div id="crossThree" class="cross"></div>
+
+            <header class="container">
+                <h1 id="title">Vaccination Survey</h1>
+                <p id="description">
+                    Help us gather better statistics on vaccination.
+                    We ask you to answer truthfully.  
+                </p>
+            </header>
+            
+            <form id="survey-form">
+
+                <div class="container formColsThenRows">
+                    <label id="name-label" for="name" class="fieldName">Name</label>
+                    <input id="name" type="text" placeholder="Name" class="field" required>
+                </div>            
+                    
+                <div class="container formColsThenRows">
+                    <label id="email-label" for="email" class="fieldName">Email</label>
+                    <input id="email" type="email" placeholder="E-mail" class="field" required>
+                </div>
+                
+                <div class="container formColsThenRows">
+                    <label id="number-label" for="number" class="fieldName">Age</label>
+                    <input id="number" type="number" min="18" max="60" placeholder="18" class="field" required>
+                </div>
+
+                <div class="container separateFieldname">
+                    <p class="fieldName">Sex assigned at birth:</p>
+                    <ul class="formOptionsGrid">
+                        <li>
+                            <input id="male" type="radio" name="sex" value="male">
+                            <label for="male" class="switch">Male</label>
+                        </li>
+                        <li>
+                            <input id="female" type="radio" name="sex" value="female">
+                            <label for="female" class="switch">Female</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="container separateFieldname">
+                    <p class="fieldName">Which vaccine did you take?</p>
+                    <div class="formColsThenRows">
+                        <label for="dropdown">Select vaccine:</label>
+                        <select id="dropdown" name="vaccine" class="field" required>
+                            <option disabled selected value>
+                                None</option>
+                            <option value="pfizer-biontech">
+                                Pfizer-BioNTech</option>
+                            <option value="moderna">
+                                Moderna</option>
+                            <option value="j&j">
+                                Johnson & Johnson</option>
+                            <option value="astrazeneca">
+                                Astrazeneca</option>
+                            <option value="sputnik-v">
+                                Sputnik V</option>
+                            <option value="sinovac">
+                                Sinovac</option>
+                            <option value="novavax">
+                                Novavax</option>
+                            <option value="covaxin">
+                                Covaxin</option>
+                            <option value="other">
+                                Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="container separateFieldname">
+                    <label for="component1" class="fieldName">
+                        Enter the date of your vaccination or getting the first component of the vaccine (required):</label>
+                    <input id="component1" type="date" class="field" required>
+                </div>
+
+                <div class="container separateFieldname">
+                    <label for="component2" class="fieldName">
+                        Enter the date of your getting the second component of the vaccine (optional):</label>
+                    <input id="component2" type="date"class="field" >
+                </div>
+
+                <div class="container separateFieldname">
+                    <p class="fieldName">Did you experience any side effects?</p>
+                    <ul class="formOptionsGrid">
+                        <li>
+                            <input id="1" type="checkbox" name="seffects" value="tiredness">
+                            <label for="1" class="switch">Tiredness</label>
+                        </li>
+                        <li>
+                            <input id="2" type="checkbox" name="seffects" value="mpain">
+                            <label for="2" class="switch">Muscle pain</label>
+                        </li>
+                        <li>
+                            <input id="3" type="checkbox" name="seffects" value="fever">
+                            <label for="3" class="switch">Fever</label>
+                        </li>
+                        <li>
+                            <input id="4" type="checkbox" name="seffects" value="other">
+                            <label for="4" class="switch">Other</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="container separateFieldname">
+                    <label for="comments" class="fieldName">Leave commentaries:</label>
+                    <textarea id="comments"class="field" ></textarea>
+                </div>
+
+                <div class="container">
+                    <input id="submit" type="submit" value="Submit">
+                </div>
+
+            </form>
+
+
+            <footer class="container">
+                <p>
+                    Created by <em>xs30snw</em> for FreeCodeCamp as a part of Responsive Web Design projects.
+                </p>
+            </footer>
+
+        </main>
+
+    <!-- FreeCodeCamp tests -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </body>
+</html>
