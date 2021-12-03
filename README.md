@@ -1,6 +1,8 @@
 # FreeCodeCamp - Medical Survey
 
-This is a solution to one of the tasks in the Responsive Design Series at [FreeCodeCamp](https://www.freecodecamp.org/learn). The page is built using basic HTML and CSS, flex.
+My solution for FreeCodeCamp challenge, where you create a simple form as a part of [the responsive web design series](https://www.freecodecamp.org/learn/responsive-web-design/). In this project I mainly use html and css, in order to hone project's accessibility and source readability.
+
+The site was built with Webpack bundler. Html contains FreeCodeCamp's CDN for tests.
 
 - Live Site URL: [GitHub Pages](https://xs30snw.github.io/FCC_medical-survey/)
 
