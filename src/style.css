@@ -70,7 +70,7 @@ footer {
     place-items: center;
 }
 
-header {    
+header {
     row-gap: .5rem;
 }
 
@@ -229,7 +229,7 @@ input {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: .5rem;
-    align-items: baseline;
+    align-items: center;
 }
 
 
@@ -238,6 +238,7 @@ input {
 /* ---------------- */
 
 @media (min-width: 550px) {
+    
     .formColsThenRows {
         grid-template-columns: 30% 1fr;
     }
@@ -249,6 +250,7 @@ input {
 }
 
 @media (min-width: 551px) {
+
     form {        
         border-radius: .5rem;
         overflow: hidden; 
