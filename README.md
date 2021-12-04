@@ -9,3 +9,7 @@ The site was built with Webpack bundler. Html contains FreeCodeCamp's CDN for te
 ## Screenshot
 
 ![](./screenshot.png)
+
+## Ideas for improvement
+
+- [ ] Make a better design, maybe emphasize groups of fields with their description, and add decorative elements
